@@ -1,4 +1,4 @@
-// Echo1 prints its command-like arguments.
+// Echo2 prints its command-like arguments.
 package main
 
 import (
@@ -7,10 +7,10 @@ import (
 )
 
 func main() {
-	var s, sep string
-	for i := 1; i < len(os.Args); i++ {
-		s += sep + os.Args[i]
-		sep = " "
+	var s, seq string
+	for _, a := range os.Args[1:] {
+		s += a + seq
+		seq = " "
 	}
 	fmt.Println(s)
 }
