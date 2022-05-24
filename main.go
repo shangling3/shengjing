@@ -4,13 +4,9 @@ package main
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 func main() {
-	var s, seq string
-	for _, a := range os.Args[1:] {
-		s += a + seq
-		seq = " "
-	}
-	fmt.Println(s)
+	fmt.Println(strings.Join(os.Args[1:], " "))
 }
